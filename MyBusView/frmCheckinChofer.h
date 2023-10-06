@@ -52,7 +52,8 @@ namespace MyBusView {
 	private: System::Windows::Forms::TextBox^ TB_Licencia_Chofer;
 
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ Cancelar_Chofer;
+
 	private: System::Windows::Forms::Button^ Registrar_Chofer;
 
 	private: System::Windows::Forms::TextBox^ TB_SecondPass_Chofer;
@@ -82,7 +83,7 @@ namespace MyBusView {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->TB_Licencia_Chofer = (gcnew System::Windows::Forms::TextBox());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->Cancelar_Chofer = (gcnew System::Windows::Forms::Button());
 			this->Registrar_Chofer = (gcnew System::Windows::Forms::Button());
 			this->TB_SecondPass_Chofer = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
@@ -168,15 +169,15 @@ namespace MyBusView {
 			this->label5->TabIndex = 17;
 			this->label5->Text = L"Numero de Licencia:";
 			// 
-			// button2
+			// Cancelar_Chofer
 			// 
-			this->button2->Location = System::Drawing::Point(204, 271);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 28);
-			this->button2->TabIndex = 19;
-			this->button2->Text = L"Cancelar";
-			this->button2->UseVisualStyleBackColor = true;
+			this->Cancelar_Chofer->Location = System::Drawing::Point(204, 271);
+			this->Cancelar_Chofer->Margin = System::Windows::Forms::Padding(4);
+			this->Cancelar_Chofer->Name = L"Cancelar_Chofer";
+			this->Cancelar_Chofer->Size = System::Drawing::Size(100, 28);
+			this->Cancelar_Chofer->TabIndex = 19;
+			this->Cancelar_Chofer->Text = L"Cancelar";
+			this->Cancelar_Chofer->UseVisualStyleBackColor = true;
 			// 
 			// Registrar_Chofer
 			// 
@@ -212,7 +213,7 @@ namespace MyBusView {
 			this->ClientSize = System::Drawing::Size(372, 334);
 			this->Controls->Add(this->TB_SecondPass_Chofer);
 			this->Controls->Add(this->label6);
-			this->Controls->Add(this->button2);
+			this->Controls->Add(this->Cancelar_Chofer);
 			this->Controls->Add(this->Registrar_Chofer);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->TB_Licencia_Chofer);

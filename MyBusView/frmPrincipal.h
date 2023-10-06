@@ -43,6 +43,8 @@ namespace MyBusView {
 	private: System::Windows::Forms::ToolStripMenuItem^ historialDeViajesToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ transporteToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ administradoresToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ salirToolStripMenuItem;
+
 
 
 	protected:
@@ -62,23 +64,37 @@ namespace MyBusView {
 		void InitializeComponent(void)
 		{
 			this->mantenimientoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->transporteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->administradoresToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->miCuentaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historialDeViajesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->transporteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->administradoresToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// mantenimientoToolStripMenuItem
 			// 
-			this->mantenimientoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+			this->mantenimientoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->transporteToolStripMenuItem,
-					this->administradoresToolStripMenuItem
+					this->administradoresToolStripMenuItem, this->salirToolStripMenuItem
 			});
 			this->mantenimientoToolStripMenuItem->Name = L"mantenimientoToolStripMenuItem";
 			this->mantenimientoToolStripMenuItem->Size = System::Drawing::Size(124, 24);
 			this->mantenimientoToolStripMenuItem->Text = L"Mantenimiento";
+			// 
+			// transporteToolStripMenuItem
+			// 
+			this->transporteToolStripMenuItem->Name = L"transporteToolStripMenuItem";
+			this->transporteToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->transporteToolStripMenuItem->Text = L"Transportes";
+			this->transporteToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmPrincipal::transporteToolStripMenuItem_Click);
+			// 
+			// administradoresToolStripMenuItem
+			// 
+			this->administradoresToolStripMenuItem->Name = L"administradoresToolStripMenuItem";
+			this->administradoresToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->administradoresToolStripMenuItem->Text = L"Administradores";
 			// 
 			// menuStrip1
 			// 
@@ -105,18 +121,12 @@ namespace MyBusView {
 			this->historialDeViajesToolStripMenuItem->Size = System::Drawing::Size(141, 24);
 			this->historialDeViajesToolStripMenuItem->Text = L"Historial de viajes";
 			// 
-			// transporteToolStripMenuItem
+			// salirToolStripMenuItem
 			// 
-			this->transporteToolStripMenuItem->Name = L"transporteToolStripMenuItem";
-			this->transporteToolStripMenuItem->Size = System::Drawing::Size(224, 26);
-			this->transporteToolStripMenuItem->Text = L"Transportes";
-			this->transporteToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmPrincipal::transporteToolStripMenuItem_Click);
-			// 
-			// administradoresToolStripMenuItem
-			// 
-			this->administradoresToolStripMenuItem->Name = L"administradoresToolStripMenuItem";
-			this->administradoresToolStripMenuItem->Size = System::Drawing::Size(224, 26);
-			this->administradoresToolStripMenuItem->Text = L"Administradores";
+			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->salirToolStripMenuItem->Text = L"Salir";
+			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmPrincipal::salirToolStripMenuItem_Click);
 			// 
 			// frmPrincipal
 			// 
@@ -138,6 +148,9 @@ namespace MyBusView {
 		frmTransportes^ ManTransportes = gcnew frmTransportes();
 		ManTransportes->MdiParent = this;
 		ManTransportes->Show();
+	}
+	private: System::Void salirToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		Application::Exit();
 	}
 };
 }

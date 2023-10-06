@@ -42,9 +42,11 @@ namespace MyBusView {
 	private: System::Windows::Forms::Button^ button_Chofer;
 	private: System::Windows::Forms::Button^ button_Pasajero;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::TextBox^ TeBoxPassPrincipal;
+	private: System::Windows::Forms::TextBox^ TB_Pass_Login;
+
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::TextBox^ TeBoxUserPrincipal;
+	private: System::Windows::Forms::TextBox^ TB_User_Login;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ button_Ingresar;
 	private: System::Windows::Forms::Button^ button_UserSalir;
@@ -67,9 +69,9 @@ namespace MyBusView {
 			this->button_Chofer = (gcnew System::Windows::Forms::Button());
 			this->button_Pasajero = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->TeBoxPassPrincipal = (gcnew System::Windows::Forms::TextBox());
+			this->TB_Pass_Login = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->TeBoxUserPrincipal = (gcnew System::Windows::Forms::TextBox());
+			this->TB_User_Login = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button_Ingresar = (gcnew System::Windows::Forms::Button());
 			this->button_UserSalir = (gcnew System::Windows::Forms::Button());
@@ -113,12 +115,12 @@ namespace MyBusView {
 			this->label3->TabIndex = 14;
 			this->label3->Text = L"Si no tiene una cuenta, registrate como";
 			// 
-			// TeBoxPassPrincipal
+			// TB_Pass_Login
 			// 
-			this->TeBoxPassPrincipal->Location = System::Drawing::Point(162, 88);
-			this->TeBoxPassPrincipal->Name = L"TeBoxPassPrincipal";
-			this->TeBoxPassPrincipal->Size = System::Drawing::Size(100, 22);
-			this->TeBoxPassPrincipal->TabIndex = 13;
+			this->TB_Pass_Login->Location = System::Drawing::Point(162, 88);
+			this->TB_Pass_Login->Name = L"TB_Pass_Login";
+			this->TB_Pass_Login->Size = System::Drawing::Size(100, 22);
+			this->TB_Pass_Login->TabIndex = 13;
 			// 
 			// label2
 			// 
@@ -129,12 +131,12 @@ namespace MyBusView {
 			this->label2->TabIndex = 12;
 			this->label2->Text = L"Contraseña:";
 			// 
-			// TeBoxUserPrincipal
+			// TB_User_Login
 			// 
-			this->TeBoxUserPrincipal->Location = System::Drawing::Point(162, 43);
-			this->TeBoxUserPrincipal->Name = L"TeBoxUserPrincipal";
-			this->TeBoxUserPrincipal->Size = System::Drawing::Size(100, 22);
-			this->TeBoxUserPrincipal->TabIndex = 11;
+			this->TB_User_Login->Location = System::Drawing::Point(162, 43);
+			this->TB_User_Login->Name = L"TB_User_Login";
+			this->TB_User_Login->Size = System::Drawing::Size(100, 22);
+			this->TB_User_Login->TabIndex = 11;
 			// 
 			// label1
 			// 
@@ -175,9 +177,9 @@ namespace MyBusView {
 			this->Controls->Add(this->button_Chofer);
 			this->Controls->Add(this->button_Pasajero);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->TeBoxPassPrincipal);
+			this->Controls->Add(this->TB_Pass_Login);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->TeBoxUserPrincipal);
+			this->Controls->Add(this->TB_User_Login);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button_Ingresar);
 			this->Name = L"frmLogin";
@@ -188,20 +190,30 @@ namespace MyBusView {
 		}
 #pragma endregion
 	private: System::Void button_Ingresar_Click(System::Object^ sender, System::EventArgs^ e) {
-		frmPrincipal^ VentPrincipal = gcnew frmPrincipal();
-		//VentPrincipal->MdiParent = this;
-		VentPrincipal->Show();
-		
-		/*Cerrar ventana anterior*/
-		this->Hide();
+		//int password_valido;
+		String^ UserName = TB_User_Login->Text;
+		String^ Password = TB_Pass_Login->Text;
+		if (UserName=="hayazi" && Password=="hayazi") {
+			//Mostrar ventana principal:
+			frmPrincipal^ VentPrincipal = gcnew frmPrincipal();
+			//VentPrincipal->MdiParent = this;
+			VentPrincipal->Show();
+			/*Cerrar ventana anterior*/
+			this->Hide();
+		}
+		else {
+			MessageBox::Show("Usuario y/o password incorrectos");
+		}
 	}
 	private: System::Void button_Pasajero_Click(System::Object^ sender, System::EventArgs^ e) {
-		frmCheckinPasajero^ RegPasajero = gcnew frmCheckinPasajero();
-		RegPasajero->Show();
+		frmCheckinPasajero^ boton_Pasajero = gcnew frmCheckinPasajero();
+		boton_Pasajero->Show();
+		this->Hide();
 	}
 	private: System::Void button_Chofer_Click(System::Object^ sender, System::EventArgs^ e) {
-		frmCheckinChofer^ RegChofer = gcnew frmCheckinChofer();
-		RegChofer->Show();
+		frmCheckinChofer^ boton_Chofer = gcnew frmCheckinChofer();
+		boton_Chofer->Show();
+		this->Hide();
 	}
 	private: System::Void button_UserSalir_Click(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();

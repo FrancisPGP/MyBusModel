@@ -43,11 +43,12 @@ namespace MyBusView {
 	private: System::Windows::Forms::TextBox^ TB_DNI_RegPsj;
 	private: System::Windows::Forms::TextBox^ TB_Edad_RegPsj;
 	private: System::Windows::Forms::TextBox^ TB_FirstPass_RegPsj;
+	private: System::Windows::Forms::Button^ Cancelar_Pasajero;
 
 
 
 
-	private: System::Windows::Forms::Button^ button2;
+
 	private: System::Windows::Forms::Button^ Registrar_Pasajero;
 	private: System::Windows::Forms::TextBox^ TB_SecondPass_RegPsj;
 
@@ -77,7 +78,7 @@ namespace MyBusView {
 			this->TB_DNI_RegPsj = (gcnew System::Windows::Forms::TextBox());
 			this->TB_Edad_RegPsj = (gcnew System::Windows::Forms::TextBox());
 			this->TB_FirstPass_RegPsj = (gcnew System::Windows::Forms::TextBox());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->Cancelar_Pasajero = (gcnew System::Windows::Forms::Button());
 			this->Registrar_Pasajero = (gcnew System::Windows::Forms::Button());
 			this->TB_SecondPass_RegPsj = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
@@ -147,15 +148,15 @@ namespace MyBusView {
 			this->TB_FirstPass_RegPsj->Size = System::Drawing::Size(119, 22);
 			this->TB_FirstPass_RegPsj->TabIndex = 7;
 			// 
-			// button2
+			// Cancelar_Pasajero
 			// 
-			this->button2->Location = System::Drawing::Point(193, 231);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 28);
-			this->button2->TabIndex = 9;
-			this->button2->Text = L"Cancelar";
-			this->button2->UseVisualStyleBackColor = true;
+			this->Cancelar_Pasajero->Location = System::Drawing::Point(193, 231);
+			this->Cancelar_Pasajero->Margin = System::Windows::Forms::Padding(4);
+			this->Cancelar_Pasajero->Name = L"Cancelar_Pasajero";
+			this->Cancelar_Pasajero->Size = System::Drawing::Size(100, 28);
+			this->Cancelar_Pasajero->TabIndex = 9;
+			this->Cancelar_Pasajero->Text = L"Cancelar";
+			this->Cancelar_Pasajero->UseVisualStyleBackColor = true;
 			// 
 			// Registrar_Pasajero
 			// 
@@ -191,7 +192,7 @@ namespace MyBusView {
 			this->ClientSize = System::Drawing::Size(327, 303);
 			this->Controls->Add(this->TB_SecondPass_RegPsj);
 			this->Controls->Add(this->label6);
-			this->Controls->Add(this->button2);
+			this->Controls->Add(this->Cancelar_Pasajero);
 			this->Controls->Add(this->Registrar_Pasajero);
 			this->Controls->Add(this->TB_FirstPass_RegPsj);
 			this->Controls->Add(this->TB_Edad_RegPsj);
@@ -209,11 +210,14 @@ namespace MyBusView {
 		}
 #pragma endregion
 	private: System::Void Registrar_Pasajero_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ RegPsj_Nombre = TB_Nombre_RegPsj->Text;
+		/*String^ RegPsj_Nombre = TB_Nombre_RegPsj->Text;
 		String^ RegPsj_DNI = TB_DNI_RegPsj->Text;
 		String^ RegPsj_Edad = TB_Edad_RegPsj->Text;
 		String^ RegPsj_FirstPass = TB_FirstPass_RegPsj->Text;
-		String^ RegPsj_SecondPass = TB_SecondPass_RegPsj->Text;
+		String^ RegPsj_SecondPass = TB_SecondPass_RegPsj->Text;*/
+		//this->Hide();
+		//frmLogin^ VentUser = gcnew frmLogin();
+		//VentUser->Show();
 	}
 };
 }
