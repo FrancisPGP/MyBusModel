@@ -191,29 +191,30 @@ namespace MyBusView {
 #pragma endregion
 	private: System::Void button_Ingresar_Click(System::Object^ sender, System::EventArgs^ e) {
 		//int password_valido;
-		String^ UserName = TB_User_Login->Text;
+		/*String^ UserName = TB_User_Login->Text;
 		String^ Password = TB_Pass_Login->Text;
 		if (UserName=="hayazi" && Password=="hayazi") {
 			//Mostrar ventana principal:
 			frmPrincipal^ VentPrincipal = gcnew frmPrincipal();
 			//VentPrincipal->MdiParent = this;
 			VentPrincipal->Show();
-			/*Cerrar ventana anterior*/
+			//Cerrar ventana anterior
 			this->Hide();
 		}
 		else {
 			MessageBox::Show("Usuario y/o password incorrectos");
-		}
+		}*/
+		frmPrincipal^ VentPrincipal = gcnew frmPrincipal();
+		VentPrincipal->Show();
+		this->Hide();
 	}
 	private: System::Void button_Pasajero_Click(System::Object^ sender, System::EventArgs^ e) {
 		frmCheckinPasajero^ boton_Pasajero = gcnew frmCheckinPasajero();
 		boton_Pasajero->Show();
-		this->Hide();
 	}
 	private: System::Void button_Chofer_Click(System::Object^ sender, System::EventArgs^ e) {
 		frmCheckinChofer^ boton_Chofer = gcnew frmCheckinChofer();
 		boton_Chofer->Show();
-		this->Hide();
 	}
 	private: System::Void button_UserSalir_Click(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();

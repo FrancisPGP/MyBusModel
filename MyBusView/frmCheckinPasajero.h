@@ -157,6 +157,7 @@ namespace MyBusView {
 			this->Cancelar_Pasajero->TabIndex = 9;
 			this->Cancelar_Pasajero->Text = L"Cancelar";
 			this->Cancelar_Pasajero->UseVisualStyleBackColor = true;
+			this->Cancelar_Pasajero->Click += gcnew System::EventHandler(this, &frmCheckinPasajero::Cancelar_Pasajero_Click);
 			// 
 			// Registrar_Pasajero
 			// 
@@ -210,14 +211,16 @@ namespace MyBusView {
 		}
 #pragma endregion
 	private: System::Void Registrar_Pasajero_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*String^ RegPsj_Nombre = TB_Nombre_RegPsj->Text;
+		String^ RegPsj_Nombre = TB_Nombre_RegPsj->Text;
 		String^ RegPsj_DNI = TB_DNI_RegPsj->Text;
 		String^ RegPsj_Edad = TB_Edad_RegPsj->Text;
 		String^ RegPsj_FirstPass = TB_FirstPass_RegPsj->Text;
-		String^ RegPsj_SecondPass = TB_SecondPass_RegPsj->Text;*/
-		//this->Hide();
-		//frmLogin^ VentUser = gcnew frmLogin();
-		//VentUser->Show();
+		String^ RegPsj_SecondPass = TB_SecondPass_RegPsj->Text;
+		MessageBox::Show("Se registró un pasajero");
+		this->Hide();
+	}
+	private: System::Void Cancelar_Pasajero_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
 	}
 };
 }

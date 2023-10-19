@@ -178,6 +178,7 @@ namespace MyBusView {
 			this->Cancelar_Chofer->TabIndex = 19;
 			this->Cancelar_Chofer->Text = L"Cancelar";
 			this->Cancelar_Chofer->UseVisualStyleBackColor = true;
+			this->Cancelar_Chofer->Click += gcnew System::EventHandler(this, &frmCheckinChofer::Cancelar_Chofer_Click);
 			// 
 			// Registrar_Chofer
 			// 
@@ -233,7 +234,11 @@ namespace MyBusView {
 		}
 #pragma endregion
 	private: System::Void Registrar_Chofer_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+		MessageBox::Show("Se registró un chofer");
+		this->Hide();
+	}
+	private: System::Void Cancelar_Chofer_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
 	}
 };
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVehicule xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Vehicule>
+    <TimeFinish>0</TimeFinish>
+    <TimeBusToBus>0</TimeBusToBus>
+    <TimeArrival>0</TimeArrival>
+    <TimeStart>0</TimeStart>
+    <Tariff>0</Tariff>
+    <SpeedMax>0</SpeedMax>
+    <License_Plate>23A-R56</License_Plate>
+    <Type>Microbus</Type>
+    <Company>Nueva Estrella</Company>
+    <Id>1</Id>
+  </Vehicule>
+  <Vehicule>
+    <TimeFinish>0</TimeFinish>
+    <TimeBusToBus>0</TimeBusToBus>
+    <TimeArrival>0</TimeArrival>
+    <TimeStart>0</TimeStart>
+    <Tariff>0</Tariff>
+    <SpeedMax>0</SpeedMax>
+    <License_Plate>45A-T78</License_Plate>
+    <Type>Autobus</Type>
+    <Company>Nueva Estrella</Company>
+    <Id>2</Id>
+  </Vehicule>
+  <Vehicule>
+    <TimeFinish>0</TimeFinish>
+    <TimeBusToBus>0</TimeBusToBus>
+    <TimeArrival>0</TimeArrival>
+    <TimeStart>0</TimeStart>
+    <Tariff>0</Tariff>
+    <SpeedMax>0</SpeedMax>
+    <License_Plate>67B-Y89</License_Plate>
+    <Type>Autobus</Type>
+    <Company>Consorcio</Company>
+    <Id>3</Id>
+  </Vehicule>
+  <Vehicule>
+    <TimeFinish>0</TimeFinish>
+    <TimeBusToBus>0</TimeBusToBus>
+    <TimeArrival>0</TimeArrival>
+    <TimeStart>0</TimeStart>
+    <Tariff>0</Tariff>
+    <SpeedMax>0</SpeedMax>
+    <License_Plate>84B-P57</License_Plate>
+    <Type>Autobus</Type>
+    <Company>Consorcio</Company>
+    <Id>4</Id>
+  </Vehicule>
+  <Vehicule>
+    <TimeFinish>0</TimeFinish>
+    <TimeBusToBus>0</TimeBusToBus>
+    <TimeArrival>0</TimeArrival>
+    <TimeStart>0</TimeStart>
+    <Tariff>0</Tariff>
+    <SpeedMax>0</SpeedMax>
+    <License_Plate>84B-P57</License_Plate>
+    <Type>Autobus</Type>
+    <Company>Vipusa</Company>
+    <Id>5</Id>
+  </Vehicule>
+</ArrayOfVehicule>

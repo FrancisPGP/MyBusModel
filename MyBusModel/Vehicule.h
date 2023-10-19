@@ -3,6 +3,7 @@
 using namespace System; /*Contiene la definición e implementación de la clase String*/
 
 namespace MyBusModel {
+    [Serializable]
     public ref class Vehicule {
     public:
         property int Id;

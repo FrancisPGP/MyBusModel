@@ -20,37 +20,37 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{D4ED2AF9-9769-47BF-A24B-5B52FD381B06}</ProjectGuid>
+    <ProjectGuid>{0B7F1EF4-B592-4674-A894-ED1670EF17E8}</ProjectGuid>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>MyBusView</RootNamespace>
+    <RootNamespace>MyBusPersistance</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <EnableManagedPackageReferenceSupport>true</EnableManagedPackageReferenceSupport>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
@@ -84,8 +84,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Windows</SubSystem>
-      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -97,7 +95,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -109,7 +106,6 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,37 +117,18 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
-      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ResourceCompile Include="app.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="frmCheckinChofer.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmCheckinPasajero.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmLogin.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmPrincipal.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmTransportes.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
+    <ClInclude Include="MyBusPersistance.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="frmCheckinChofer.cpp" />
-    <ClCompile Include="frmCheckinPasajero.cpp" />
-    <ClCompile Include="frmLogin.cpp" />
-    <ClCompile Include="frmPrincipal.cpp" />
-    <ClCompile Include="frmTransportes.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="MyBusPersistance.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -159,34 +136,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyBusController\MyBusController.vcxproj">
-      <Project>{ff7497fa-cf50-4ab2-8d4a-671e5085c272}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\MyBusModel\MyBusModel.vcxproj">
       <Project>{a69211aa-2a33-4721-9d1d-cdc1ae581c7b}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="frmCheckinChofer.resx">
-      <DependentUpon>frmCheckinChofer.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCheckinPasajero.resx">
-      <DependentUpon>frmCheckinPasajero.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTransportes.resx">
-      <DependentUpon>frmTransportes.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

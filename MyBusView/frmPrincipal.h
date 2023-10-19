@@ -66,10 +66,10 @@ namespace MyBusView {
 			this->mantenimientoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->transporteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->administradoresToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->miCuentaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->historialDeViajesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -86,15 +86,22 @@ namespace MyBusView {
 			// transporteToolStripMenuItem
 			// 
 			this->transporteToolStripMenuItem->Name = L"transporteToolStripMenuItem";
-			this->transporteToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->transporteToolStripMenuItem->Size = System::Drawing::Size(201, 26);
 			this->transporteToolStripMenuItem->Text = L"Transportes";
 			this->transporteToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmPrincipal::transporteToolStripMenuItem_Click);
 			// 
 			// administradoresToolStripMenuItem
 			// 
 			this->administradoresToolStripMenuItem->Name = L"administradoresToolStripMenuItem";
-			this->administradoresToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->administradoresToolStripMenuItem->Size = System::Drawing::Size(201, 26);
 			this->administradoresToolStripMenuItem->Text = L"Administradores";
+			// 
+			// salirToolStripMenuItem
+			// 
+			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(201, 26);
+			this->salirToolStripMenuItem->Text = L"Salir";
+			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmPrincipal::salirToolStripMenuItem_Click);
 			// 
 			// menuStrip1
 			// 
@@ -105,7 +112,7 @@ namespace MyBusView {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(523, 28);
+			this->menuStrip1->Size = System::Drawing::Size(631, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -121,18 +128,11 @@ namespace MyBusView {
 			this->historialDeViajesToolStripMenuItem->Size = System::Drawing::Size(141, 24);
 			this->historialDeViajesToolStripMenuItem->Text = L"Historial de viajes";
 			// 
-			// salirToolStripMenuItem
-			// 
-			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
-			this->salirToolStripMenuItem->Size = System::Drawing::Size(224, 26);
-			this->salirToolStripMenuItem->Text = L"Salir";
-			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmPrincipal::salirToolStripMenuItem_Click);
-			// 
 			// frmPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(523, 437);
+			this->ClientSize = System::Drawing::Size(631, 574);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"frmPrincipal";
